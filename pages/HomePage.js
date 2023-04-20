@@ -48,8 +48,8 @@ const HomeScreen = props => {
               <Box>
                 <AspectRatio w="50%" position="absolute" right="0" top="2">
                   <Image resizeMode="contain" opacity="10" source={{
-                    uri: "https://raw.githubusercontent.com/Techino-2022/moonwatch/main/assets/images/huawei_logo.png"
-                  }} alt="huawei logo"
+                    uri: "https://raw.githubusercontent.com/Techino-2022/moonwatch/main/assets/images/company_logos/huawei_logo.png"
+                  }} alt="Huawei logo"
                   />
                 </AspectRatio>
               </Box>
@@ -93,8 +93,8 @@ const HomeScreen = props => {
                 <Box>
                   <AspectRatio w="50%" position="absolute" right="0" top="2">
                     <Image resizeMode="contain" opacity="10" source={{
-                      uri: "https://raw.githubusercontent.com/Techino-2022/moonwatch/main/assets/images/xiaomi_logo.png"
-                    }} alt="huawei logo"
+                      uri: "https://raw.githubusercontent.com/Techino-2022/moonwatch/main/assets/images/company_logos/xiaomi_logo.png"
+                    }} alt="Xiaomi logo"
                     />
                   </AspectRatio>
                 </Box>
