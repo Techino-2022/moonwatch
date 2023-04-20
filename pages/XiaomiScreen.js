@@ -17,7 +17,11 @@ import {
 } from "native-base";
 
 
-const XiaomiScreen = () => {
+const XiaomiScreen = props => {
+
+  const { navigate } = props.navigation;
+
+
   return (
     <NativeBaseProvider>
       <StatusBar />
@@ -30,7 +34,6 @@ const XiaomiScreen = () => {
         <VStack space={20} alignItems="flex-start">
           <VStack space={5} alignItems="flex-start">
             <Heading size="md">Choose your <Text color="emerald.500">Xiaomi</Text> watch model</Heading>
-            <Text>Choose your watch brand</Text>
           </VStack>
           <VStack space={5} alignItems="flex-start">
             <Box minW="80" maxH="80" minHeight="140" rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
