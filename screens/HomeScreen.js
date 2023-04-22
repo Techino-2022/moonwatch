@@ -29,7 +29,7 @@ const HomeScreen = props => {
         px={2}
         flex={1}
       >
-       {/* <ToggleDarkMode/> */} 
+        {/* <ToggleDarkMode/> */}
         <VStack space={20} alignItems="flex-start">
           <VStack space={5} alignItems="flex-start">
             <Heading size="md">Welcome to <Text color="emerald.500">MoonWatch</Text> App</Heading>
@@ -45,37 +45,32 @@ const HomeScreen = props => {
             }} _light={{
               backgroundColor: "gray.50"
             }}>
-              <Box>
-                <AspectRatio w="50%" position="absolute" right="0" top="2">
-                  <Image resizeMode="contain" opacity="10" source={{
-                    uri: "https://raw.githubusercontent.com/Techino-2022/moonwatch/main/assets/images/company_logos/huawei_logo.png"
-                  }} alt="Huawei logo"
-                  />
-                </AspectRatio>
-              </Box>
-              <Stack p="4" space={3}>
-                <Stack space={2}>
-                  <Heading size="md" ml="-1">
-                    Huawei smartwatches
-                  </Heading>
-                  <Text fontSize="xs" _light={{
-                    color: "emerald.500"
-                  }} _dark={{
-                    color: "emerald.500"
-                  }} fontWeight="500" ml="-0.5" mt="-1">
-                    include: Huawei/Honor band 5, Huwaei/Honor band 6, Huwaei/Honor band 7
-                  </Text>
-                </Stack>
-                <HStack alignItems="center" space={4} justifyContent="space-between">
-                  <HStack alignItems="center">
-                    <Text color="coolGray.600" _dark={{
-                      color: "warmGray.200"
-                    }} fontWeight="400">
-                      Last update: 6 mins ago
+              <Pressable onPress={() =>
+                navigate('HuaweiModel')
+              }>
+                <Box>
+                  <AspectRatio w="50%" position="absolute" right="0" top="2">
+                    <Image resizeMode="contain" opacity="10" source={{
+                      uri: "https://raw.githubusercontent.com/Techino-2022/moonwatch/main/assets/images/company_logos/huawei_logo.png"
+                    }} alt="Huawei logo"
+                    />
+                  </AspectRatio>
+                </Box>
+                <Stack p="4" space={3}>
+                  <Stack space={3}>
+                    <Heading size="md" ml="-1">
+                      Huawei smartwatches
+                    </Heading>
+                    <Text fontSize="xs" _light={{
+                      color: "emerald.500"
+                    }} _dark={{
+                      color: "emerald.500"
+                    }} fontWeight="500" ml="-0.5" mt="-1">
+                      include: Huawei/Honor band 5, Huwaei/Honor band 6, Huwaei/Honor band 7
                     </Text>
-                  </HStack>
-                </HStack>
-              </Stack>
+                  </Stack>
+                </Stack>
+              </Pressable>
             </Box >
             <Box minW="80" maxH="80" minHeight="140" rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
               borderColor: "coolGray.600",
@@ -88,8 +83,8 @@ const HomeScreen = props => {
             }}
             >
               <Pressable onPress={() =>
-              navigate('XiaomiModel')
-            }>
+                navigate('XiaomiModel')
+              }>
                 <Box>
                   <AspectRatio w="50%" position="absolute" right="0" top="2">
                     <Image resizeMode="contain" opacity="10" source={{
@@ -99,7 +94,7 @@ const HomeScreen = props => {
                   </AspectRatio>
                 </Box>
                 <Stack p="4" space={3}>
-                  <Stack space={2}>
+                  <Stack space={3}>
                     <Heading size="md" ml="-1">
                       Xiaomi smartwatches
                     </Heading>
@@ -111,15 +106,6 @@ const HomeScreen = props => {
                       include: Mi band 5, Mi band 6, Mi band 7
                     </Text>
                   </Stack>
-                  <HStack alignItems="center" space={4} justifyContent="space-between">
-                    <HStack alignItems="center">
-                      <Text color="coolGray.600" _dark={{
-                        color: "warmGray.200"
-                      }} fontWeight="400">
-                        Last update: 1 hour ago
-                      </Text>
-                    </HStack>
-                  </HStack>
                 </Stack>
               </Pressable>
             </Box>

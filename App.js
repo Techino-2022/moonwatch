@@ -6,8 +6,10 @@ const Stack = createNativeStackNavigator();
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import HomeScreen from './pages/HomePage'
-import XiaomiScreen from './pages/XiaomiScreen'
+import HomeScreen from './screens/HomeScreen'
+import XiaomiScreen from './screens/XiaomiScreen'
+import HuaweiScreen from './screens/HuaweiScreen'
+import WatchScreen from './screens/WatchScreen'
 
 // Define the config
 const config = {
@@ -36,6 +38,9 @@ export default function App() {
             
         />
         <Stack.Screen name="XiaomiModel" component={XiaomiScreen} />
+        <Stack.Screen name="HuaweiModel" component={HuaweiScreen} />
+        <Stack.Screen name="WatchModel" component={WatchScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

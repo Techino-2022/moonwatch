@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Text,
   HStack,
@@ -18,6 +18,49 @@ import {
 
 
 const XiaomiScreen = props => {
+
+  const [band5Count, setBand5Count] = useState([]);
+  const [band6Count, setBand6Count] = useState([]);
+  const [band7Count, setBand7Count] = useState([]);
+
+  const getM5Count = async (Mband5count) => {
+    try {
+      const response = await fetch('http://192.168.42.72:8000/' + Mband5count + '/');
+      const json = await response.json();
+      setBand5Count(json);
+    } catch (error) {
+      console.error(error);
+    } finally {
+    }
+  };
+
+  const getM6Count = async (Mband6count) => {
+    try {
+      const response = await fetch('http://192.168.42.72:8000/' + Mband6count + '/');
+      const json = await response.json();
+      setBand6Count(json);
+    } catch (error) {
+      console.error(error);
+    } finally {
+    }
+  };
+
+  const getM7Count = async (Mband7count) => {
+    try {
+      const response = await fetch('http://192.168.42.72:8000/' + Mband7count + '/');
+      const json = await response.json();
+      setBand7Count(json);
+    } catch (error) {
+      console.error(error);
+    } finally {
+    }
+  };
+
+  useEffect(() => {
+    getM5Count("m5count");
+    getM6Count("m6count");
+    getM7Count("m7count");
+  }, []);
 
   const { navigate } = props.navigation;
 
@@ -63,16 +106,17 @@ const XiaomiScreen = props => {
                   }} _dark={{
                     color: "emerald.500"
                   }} fontWeight="500" ml="-0.5" mt="-1">
-                    Total Watchfaces: 32
+                    Total Watchfaces: {band5Count}
                   </Text>
                 </Stack>
                 <HStack alignItems="center" space={4} fontSize="xs" justifyContent="space-between">
                   <HStack alignItems="center">
-                    <Text color="coolGray.600" _dark={{
+                    {/* <Text color="coolGray.600" _dark={{
                       color: "warmGray.200"
                     }} fontWeight="400">
-                      Last update: 1 mins ago
+                      Last update: 22 mins ago
                     </Text>
+                  */}
                   </HStack>
                 </HStack>
               </Stack>
@@ -104,16 +148,17 @@ const XiaomiScreen = props => {
                   }} _dark={{
                     color: "emerald.500"
                   }} fontWeight="500" ml="-0.5" mt="-1">
-                    Total Watchfaces: 30
+                    Total Watchfaces: {band6Count}
                   </Text>
                 </Stack>
                 <HStack alignItems="center" space={4} fontSize="xs" justifyContent="space-between">
                   <HStack alignItems="center">
-                    <Text color="coolGray.600" _dark={{
+                    {/* <Text color="coolGray.600" _dark={{
                       color: "warmGray.200"
                     }} fontWeight="400">
-                      Last update: 11 mins ago
+                      Last update: 22 mins ago
                     </Text>
+                  */}
                   </HStack>
                 </HStack>
               </Stack>
@@ -146,16 +191,17 @@ const XiaomiScreen = props => {
                   }} _dark={{
                     color: "emerald.500"
                   }} fontWeight="500" ml="-0.5" mt="-1">
-                    Total Watchfaces: 3
+                    Total Watchfaces: {band7Count}
                   </Text>
                 </Stack>
                 <HStack alignItems="center" space={4} fontSize="xs" justifyContent="space-between">
                   <HStack alignItems="center">
-                    <Text color="coolGray.600" _dark={{
+                    {/* <Text color="coolGray.600" _dark={{
                       color: "warmGray.200"
                     }} fontWeight="400">
-                      Last update: 8 mins ago
+                      Last update: 22 mins ago
                     </Text>
+                  */}
                   </HStack>
                 </HStack>
               </Stack>

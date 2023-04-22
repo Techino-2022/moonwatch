@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "MoonWatch",
+    "slug": "moon-watch",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#f7fafc"
     },
     "updates": {
@@ -23,10 +23,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.techino.moonwatch"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "11055ad7-8cef-49b8-850a-3de9bc0b424b"
+      }
     }
   }
 }
